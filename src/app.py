@@ -41,6 +41,8 @@ def sitemap():
 
 @app.route('/import_people')
 def import_people():
+    # Reference: https://stackoverflow.com/questions/61977076/how-to-fetch-data-from-api-using-python
+    # Reference: https://docs.sqlalchemy.org/en/20/tutorial/orm_data_manipulation.html
     res = requests.get('https://www.swapi.tech/api/people/')
     response = json.loads(res.text)
     
